@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduSim Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di EduSim 👋</h1>
+    <p>Klik "Mulai Belajar" untuk memilih permainan.</p>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="homeView">
+      <button id="mulaiBtn">Mulai Belajar</button>
+    </section>
+
+    <!-- Pilih Game -->
+    <section id="chooseView" class="hidden">
+      <h2>Pilih Permainan</h2>
+      <div class="game-grid">
+        <div class="game-box" data-game="penjumlahan">
+          <h3>➕ Penjumlahan</h3>
+          <p>20 soal pilihan ganda</p>
+        </div>
+        <div class="game-box" data-game="pola">
+          <h3>🔢 Pola Aritmatika</h3>
+          <p>20 soal pola (isi angka berikutnya)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area Game -->
+    <section id="gameView" class="hidden">
+      <h2 id="gameTitle"></h2>
+      <div id="questionArea">
+        <div id="question"></div>
+        <div id="options" class="jawaban"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <div id="progress"></div>
+      </div>
+      <div class="controls">
+        <button id="backBtn">Kembali</button>
+      </div>
+    </section>
+
+    <!-- Hasil -->
+    <section id="resultView" class="hidden">
+      <h2 id="resultText"></h2>
+      <button id="againBtn">Pilih Game Lain</button>
+    </section>
+  </main>
+
+  <!-- Musik Latar -->
+  <audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/09/audio_69ab8f498d.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
